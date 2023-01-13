@@ -13,5 +13,8 @@ func New() *HelloRepo {
 func (h *HelloRepo) Say(request entity.HelloRequest) string {
 	var helloEntity entity.HelloResponse
 
+	helloEntity.Name = request.Name
+	helloEntity.Message = "it's works!"
+
 	return helloEntity.ToString()
 }
